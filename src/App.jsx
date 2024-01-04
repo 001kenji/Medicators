@@ -17,6 +17,19 @@ import sectorImg3 from './assets/img/client3.png'
 import sectorImg4 from './assets/img/client4.png'
 import sectorImg5 from './assets/img/client5.png'
 import SignUpImg from './assets/img/contact-img.png'
+import ambulanceImg from './assets/img/ambulance.png'
+import pharmecyImg from './assets/img/pharmacy.png'
+import medicalImg from './assets/img/stethoscope.png'
+import HomeImg from './assets/img/home.png'
+import HappyImg from './assets/img/happy.png'
+import UserImg from './assets/img/user.png'
+import CalendaImg from './assets/img/calendar.png'
+import bloodTransImg from './assets/img/blood-transfusion.png'
+import teethImg from './assets/img/teeth.png'
+import notebookImg from './assets/img/notebook.png'
+import EarImg from './assets/img/ear-plug.png'
+import sightImg from './assets/img/insight.png'
+import heartbearImg from './assets/img/heart-beat.png'
   //  import { FaArrowLeftLong } from "react-icons/fa6"; left straight arrow
 import { FaCaretSquareRight } from "react-icons/fa"; 
 import { FaArrowRightLong } from "react-icons/fa6"; 
@@ -62,7 +75,7 @@ import Footer from './JSX/footer'
     {
       title : `We Provide Medical Services That You Can Trust!`,
       img : sliderImg,
-      description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. ',
+      description : 'Beyond the white coat, I\'m a detective, deciphering whispers from your body. Years of honing my clinical gaze translate subtle clues into diagnoses, each case a unique puzzle to solve. ',
       appointment : '/',
       more : '/',
       moreDis : 'Contact Now'
@@ -70,7 +83,7 @@ import Footer from './JSX/footer'
     {
       title : 'We Provide Medical Services That You Can Trust!',
       img : slider2Img,
-      description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. ',
+      description : 'My practice is a tapestry woven from experience and empathy. Each thread represents a patient, their story entrusted to my care.',
       appointment : '/',
       more : '/',
       moreDis : 'Learn More'
@@ -78,14 +91,14 @@ import Footer from './JSX/footer'
     {
       title : 'We Provide Medical Services That You Can Trust!',
       img : slider3Img,
-      description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. ',
+      description : 'Science is my language, technology my toolbelt. From cutting-edge diagnostics to innovative treatments, I embrace the advancements that empower my care.',
       appointment : '/',
       more : '/',
       moreDis : 'About Us'
     }
   ]
  const doctorDatabaseMaper = doctorDatabase.map((details) => 
-    <div id='mapping-doc-div' className={` bg-amber-[url(${details.img})]`}>
+    <div style={{backgroundImage : `url(${details.img})`}} id='mapping-doc-div'>
       <h1 className=' font-bold xl:text-2xl  translate-y-10 text-lg'>{details.title}</h1>
       <span className=' xl:text-xl font-sans'>{details.description}</span>
       <div className=' flex flex-col sm:flex-row sm:mb-4 w-full mx-auto gap-2 sm:gap-0 justify-around'>
@@ -125,13 +138,13 @@ function Scroll(props) {
   {
     name :'John Medani',
     title : 'Emergency Cases',
-    detail : 'description here',
+    detail : ' One moment, a child\'s laughter echoes down the hallway, the next, anguished cries pierce the sterile air. We triage, we stabilize, we fight the invisible demons clawing at the precipice of life',
     link :''
   },
   {
     name :'Lona Kent',
     title : 'Doctors Timetable',
-    detail : 'description here',
+    detail : 'My days in the hospital are a vibrant mosaic. Mornings fly by with rounds and consultations, afternoons often bring surgeries or procedures, and evenings may hold research or emergency calls.',
     link :''
   },
   {
@@ -163,29 +176,29 @@ const MoreInfoMapper = moreinfoDabatase.map((details) =>
 
 const services = [
   {
-    img : '',
+    img : ambulanceImg,
     imgAlt :'ambullance img',
     title :'Emergency Help',
-    description :'description here'
+    description : 'n the ER, we\'re not just treating conditions, we\'re buying time for miracles'
   },
   {
-    img : '',
+    img : pharmecyImg,
     title :'Enriched Pharmecy',
     imgAlt :'pharmercy  img',
-    description :'description here'
+    description :'Beyond prescriptions, our Enriched Pharmacy offers wellness services and personalized care to help you heal, thrive, and reach your full potential.'
   },
   {
-    img : '',
+    img : medicalImg,
     title :'Medical Treatment',
     imgAlt :'medical img',
-    description :'description here'
+    description :'We tackled the problem head-on and achieved a positive outcome.'
   }
 ]
 
 const servicesMapper= services.map((detail) => 
     <div id='mapping-service-div'>
-      <img className=' rounded-full' src={detail.img} alt={detail.imgAlt} />
-      <h1 className=' text-xl font-bold'>{detail.title}</h1>
+      <img className=' p-4 rounded-full' src={detail.img} alt={detail.imgAlt} />
+      <h1 className=' text-center text-xl font-bold'>{detail.title}</h1>
       <blockquote className=' text-center text-slate-600'>{detail.description}</blockquote>
 
 
@@ -193,22 +206,22 @@ const servicesMapper= services.map((detail) =>
 
 const facilityData = [
   {
-    img : FaHouseChimneyCrack,
+    img : HomeImg,
     number :3851,
     description :'Hospital Rooms'
   },
   {
-    img : IoPersonSharp,
+    img : UserImg,
     number :543,
     description :'Specialist Doctors'
   },
   {
-    img : RiEmotionHappyLine,
+    img : HappyImg,
     number :4283,
     description :'Happy Patients '
   },
   {
-    img : MdCalendarMonth,
+    img : CalendaImg,
     number :22,
     description :'Years of Experience'
   } 
@@ -216,45 +229,45 @@ const facilityData = [
 
 const facilityMapper = facilityData.map((details) => 
     <div id='mapping-facility-div'>
-      <img className=' rounded-full' src="" alt="" />
+      <img className=' bg-slate-50 justify-center p-4 align-middle flex content-center rounded-full' src={details.img} alt="" />
       <span className=' font-bold text-3xl'>{details.number}</span>
       <span className='  font-mono'>{details.description}</span>
     </div>)
     const healthServiceData = [
       {
-        img :'',
+        img : notebookImg,
         title : 'General Treatment',
         description : 'desctiption here'
       },
       {
-        img :'',
+        img :teethImg,
         title : 'Teeth Whitening',
         description : 'desctiption here'
       },
       {
-        img :'',
+        img :heartbearImg,
         title : 'Heart Surgery',
         description : 'desctiption here'
       },
       {
-        img :'',
+        img : EarImg,
         title : 'Ear Treatment',
         description : 'desctiption here'
       },
       {
-        img :'',
+        img :sightImg,
         title : 'Vision Problems',
         description : 'desctiption here'
       },
       {
-        img :'',
+        img : bloodTransImg,
         title : 'Blood Transfusion',
         description : 'desctiption here'
       }
     ]
     const HealthServiceMapper = healthServiceData.map((details) => 
     <div id='mapping-hearlthService-div'>
-      <img className=' w-16  h-16 rounded-md' src="" alt="" />
+      <img className=' p-3 w-16 md:p-2  h-16 rounded-md' src={details.img} alt="" />
       <div className=' w-[60%] grid text-left'>
          <span className=' text-left text-slate-800 font-semibold text-xl'>{details.title}</span>
       <span className=' text-slate-500 '>{details.description}</span>
@@ -267,19 +280,19 @@ const NewsDatabase = [
     img :blogImg1,
     date :' 22-december-2020',
     title : 'We have announced our new product',
-    description : 'desciption here'
+    description : 'Curious about taking control of your health? My groundbreaking invention has been featured in the news, showcasing its potential to revolutionize [specific condition or area of health].'
   },
   {
     img :blogImg2,
     date : '15-july-2020',
-    title : 'Top five way for solving teeth problems',
-    description : 'desciption here'
+    title : 'Top way for solving teeth problems',
+    description : 'Uncertain about those throbbing teeth? Don\'t let misinformation cause pain. My research on modern solutions to common dental issues is featured in the news today. Give us a call, let\'s talk relief, and get you back to smiling confidently.'
   },
   {
     img :blogImg3,
     date : '5-Jan-2020',
     title : 'We provide highly business solutions',
-    description : 'desciption here'
+    description : 'Tired of battling the same health concerns? My innovative solutions have demonstrably improved patient outcomes in news reports like technological. Let\'s talk about how I can transform your health journey too'
   }
 ]
 
@@ -291,7 +304,7 @@ const NewsDatabaseMapper = NewsDatabase.map((details) =>
       <div className='  flex flex-col gap-3 justify-around align-middle'>
         <span className=' p-1 my-2 text-sm mx-auto rounded-sm bg-blue-500 text-slate-50 font-semibold w-fit minw-w-[80px] '>{details.date}</span>
         <h1 className='p-1 text-center font-bold text-slate-900 text-sm'>{details.title}</h1>
-        <blockquote className=' p-3 text-sm text-center text-slate-500'>{details.description}</blockquote>
+        <blockquote className=' p-3 text-sm text-center sm:text-lg text-slate-500'>{details.description}</blockquote>
       </div>
     </div>)
 
@@ -351,7 +364,7 @@ const ToTopStyler ={
 
     <>
 
-    <div id='navSect'>
+    <div className='' id='navSect'>
       <Navbar />
     </div>
 
@@ -376,7 +389,7 @@ const ToTopStyler ={
         <div className=' flex flex-col align-middle mx-auto'>
           <h1 className=' font-semibold px-4 text-black text-center xl:text-4xl text-2xl'>We Are Ready to Help You & Your Family</h1>
           <img className=' xl:w-20 w-16 mx-auto my-3' src={LifeTrackImg} alt="" />
-          <blockquote className=' text-slate-500 px-4 text-center'>discription here</blockquote>
+          <blockquote className=' text-slate-500 px-4 text-center'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</blockquote>
         </div>
         <div id='hosting-servicesMapper-div'>{servicesMapper}</div>
 
@@ -390,7 +403,7 @@ const ToTopStyler ={
         <div className=' flex flex-col justify-around px-6 text-center p-2 gap-4'>
           <span className=' font-semibold md:text-3xl xl:text-4xl  text-2xl'>We Offer Different Services To Improve Your Health</span>
           <img className=' w-18 mx-auto' src={LifeTrackImg} alt="" />
-          <span className=' text-slate-500'>description here</span>
+          <span className=' text-slate-500'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</span>
         </div>
         <div className=' grid gap-5'>
           <div className=' flex ml-1  flex-col'>
@@ -398,23 +411,24 @@ const ToTopStyler ={
                 <span className=' bg-blue-500 rounded-full h-0.5 w-28'></span>
 
           </div>
-          <blockquote className=' text-center mx-auto text-slate-500'>description here</blockquote>
-          <blockquote className=' text-center mx-auto text-slate-500'>description here</blockquote>
+          <blockquote className=' text-center mx-auto text-slate-500'>I wear a white coat, but behind it beats a heart that listens. My days are stitched with science, but empathy threads each diagnosis. In whispers and murmurs, I decipher the body's story, guiding it back to health, one beat at a time.</blockquote>
+          <blockquote className=' text-center mx-auto text-slate-500'>
+I wear a stethoscope woven from empathy, a scalpel honed by precision, and a smile built on resilience. I bridge the gap between vulnerability and wellness, weaving threads of knowledge and comfort into the tapestry of every breath.</blockquote>
         </div>
 
         <div id='video-container-div'>
           <div id='play-video-div' className=' flex justify-center my-auto  rounded-full p-8  mx-auto'>
-            <span className=' h-5 w-5 xl:h-20 xl:w-20  rounded-full duration-700  ease-in-out animate-ping bg-slate-100 absolute p-8'></span>
-            <span className=' h-5 w-5 xl:h-20 xl:w-20  rounded-full duration-700 ease-in-out animate-ping bg-slate-100 absolute p-8'></span>
-            <span className=' h-5 w-5 xl:h-20 xl:w-20  rounded-full animate-pulse bg-slate-100 absolute p-8'></span>
-            <FaPlayCircle className=' xl:text-5xl animate-none z-50  text-4xl text-blue-500'/></div>
+            <span className=' h-5  cursor-pointer w-5 xl:h-20 xl:w-20  rounded-full duration-700  ease-in-out animate-ping bg-slate-100 absolute p-8'></span>
+            <span className=' h-5  cursor-pointer w-5 xl:h-20 xl:w-20  rounded-full duration-700 ease-in-out animate-ping bg-slate-100 absolute p-8'></span>
+            <span className=' h-5  cursor-pointer w-5 xl:h-20 xl:w-20  rounded-full animate-pulse bg-slate-100 absolute p-8'></span>
+            <FaPlayCircle className=' cursor-pointer xl:text-5xl animate-none z-50  text-4xl text-blue-500'/></div>
 
         </div>
 
         <div id='emergency-container-div'>
-          <div id='bg-emergency-div' className=' bg-opacity-80 bg-blue-500 '>
+          <div id='bg-emergency-div' className=' text-center bg-opacity-80 bg-blue-500 '>
             <span className=' font-bold text-2xl text-slate-50 text-center '>Do you need Emergency Medical Care ? Call @ +254 7683083987</span>
-          <span className=' text-center text-slate-100 font-mono px-1'>Description here</span>
+          <span className=' text-center text-slate-100 font-mono px-1'> Our emergency care unit is staffed with experts eager to help, and swift action can make a world of difference. Don't hesitate, call now, and let us ease your worries and ensure your well-being.</span>
           <div className=' flex flex-row gap-4'>
             <button className=' min-w-32 font-semibold bg-slate-100 rounded-md p-2 text-sm text-blue-500 text-center'>Contact Now</button>
             <button className=' min-w-32 min-h-[45px] border-[1px] border-slate-100 rounded-md p-2 h-fit text-sm flex flex-row gap-4 align-middle my-auto font-semibold text-slate-950'> <p>Learn More</p>  <p><FaArrowRightLong className='relative my-auto'/></p></button>
@@ -426,7 +440,7 @@ const ToTopStyler ={
         <div className=' flex flex-col justify-around px-6 text-center p-2 gap-4'>
           <span className=' font-semibold md:text-3xl text-2xl'>We Maintain Cleanliness Rules Inside Our Hospital</span>
           <img className=' w-18 md:w-20 mx-auto' src={LifeTrackImg} alt="" />
-          <span className=' text-slate-500'>description here</span>
+          <span className=' text-slate-500'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</span>
         </div>
 
         <div id='maintain-showcase-div'>
@@ -435,7 +449,7 @@ const ToTopStyler ={
         <div className=' flex flex-col justify-around px-6 text-center p-2 gap-4'>
           <span className=' font-semibold xl:text-4xl text-2xl'>We Offer Differenct Services To Improve Your Health</span>
           <img className=' w-18 mx-auto' src={LifeTrackImg} alt="" />
-          <span className=' text-slate-500'>description here</span>
+          <span className=' text-slate-500'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</span>
         </div>
 
         <div id='health-service-container-div'>
@@ -446,7 +460,7 @@ const ToTopStyler ={
         <div className=' flex flex-col justify-around px-6 text-center p-2 gap-4'>
           <span className=' xl:text-4xl font-semibold text-2xl'>We Provide You The Best Treatment In Resonable Price</span>
           <img className=' w-18 mx-auto' src={LifeTrackImg} alt="" />
-          <span className=' text-slate-500'>description here</span>
+          <span className=' text-slate-500'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</span>
         </div>
 
         <div className=' flex flex-col md:flex-row md:flex-wrap gap-10'>
@@ -512,7 +526,7 @@ const ToTopStyler ={
       <div id='newsSect' className=' flex flex-col justify-around px-6 text-center p-2 my-10 gap-4'>
           <span className=' font-semibold text-2xl xl:text-4xl'>Keep Up With Our Most Recent Medical News</span>
           <img className=' w-18 mx-auto' src={LifeTrackImg} alt="" />
-          <span className=' text-slate-500'>description here</span>
+          <span className=' text-slate-500'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</span>
         </div>
 
         <div className=' gap-4 xl:w-full align-middle justify-center flex flex-row flex-wrap'>
@@ -530,7 +544,7 @@ const ToTopStyler ={
         <div id='contact-container-div' className=' flex flex-col justify-around px-6 text-center p-2 gap-4'>
           <span className=' font-semibold text-2xl'>We Are Always Ready To Help You.Book An Appointment</span>
           <img className=' w-18 mx-auto' src={LifeTrackImg} alt="" />
-          <span className=' text-slate-500'>description here</span>
+          <span className=' text-slate-500'>Our schedule fills up quickly, so call early to secure your spot for personalized care.</span>
         </div>
 
         <div >
@@ -587,7 +601,7 @@ const ToTopStyler ={
               </div>
               <div className=' md:w-[50%] md:h-[100%] flex flex-col bg-blue-200 xl:min-h-[300px] xl:justify-around text-center gap-4 mb-1 p-1'>
                 <h1 className=' text-xl font-semibold text-slate-800'>Sign Up for newsletter</h1>
-                <blockquote className=' text-slate-500'>description here</blockquote>
+                <blockquote className=' text-slate-500'>Unlock health insights and tips straight to your inbox.</blockquote>
                 <input placeholder='Your email address' className=' placeholder:pl-2 bg-slate-50 h-[40px] rounded-sm text-slate-950 font-semibold text-center placeholder:text-left' type="text" />
                 <button className=' p-2 w-3/4 mx-auto text-slate-50 bg-blue-500 rounded-sm mb-2 font-semibold text-sm text-center'>Subscribe</button>
               </div>

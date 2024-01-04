@@ -8,9 +8,9 @@ export default function Footer()  {
         <footer className=" pl-3 text-slate-100 flex flex-col  gap-3 py-5 bg-blue-600">
             <div className=" align-middle grid relative w-full">
                 <div className=" md:mx-auto my-1 flex flex-col  gap-1">
-                    <h1 className="text-white font-mono font-semibold text-2xl">About Us</h1>
+                    <h1 className="text-white font-mono font-semibold text-center text-2xl">About Us</h1>
                     <span className=" md:mx-auto bg-slate-50 h-1 rounded-sm w-[5rem]"></span>
-                    <blockquote className="font-serif  text-slate-200">Description here</blockquote>
+                    <blockquote className="font-serif  text-slate-200 text-center">I wear a white coat, but behind it beats a heart that listens. My days are stitched with science, but empathy threads each diagnosis. In whispers and murmurs, I decipher the body's story, guiding it back to health, one beat at a time.</blockquote>
                     <div className=" text-white">
 
                     </div>
@@ -57,7 +57,7 @@ export default function Footer()  {
                             <span className=" md:mx-auto bg-slate-50 h-1 rounded-sm w-[6rem]"></span>
                         </div>
                         <div className="font-semibold md:px-3 flex  pr-4 flex-col gap-1">
-                            <blockquote className=" text-slate-200 font-normal font-serif">description here</blockquote>
+                            <blockquote className=" text-slate-200 text-center font-normal font-serif">My doors swing wide for your well-being, mirroring the sun’s arc.</blockquote>
                             <span className=" flex flex-row w-full justify-between"><p>Monday-Friday</p><p>8.00-20.00</p></span>
                             <span className=" flex flex-row w-full justify-between"><p>Saturday</p><p>9.00-18.00</p></span>
                             <span className=" flex flex-row w-full justify-between"><p>Monday-Thursday</p><p>9.00-15.00</p></span>

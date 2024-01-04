@@ -134,7 +134,7 @@
   justify-content: space-between;
   min-height: 350px;
   background-repeat: no-repeat;
-  background-image: url('./assets/img/slider.jpg');
+  /* background-image: url('./assets/img/slider.jpg'); */
   background-position: center;
   background-size: cover;
 
@@ -569,7 +569,7 @@
     justify-content: space-between;
     min-height: 350px;
     background-repeat: no-repeat;
-    background-image: url('./assets/img/slider.jpg');
+    /* background-image: url('./assets/img/slider.jpg'); */
     background-position: center;
     background-size: cover;
   
@@ -868,7 +868,7 @@
   
 }
 
-@media only screen and (min-width : 376px) and (max-width : 425px) {
+@media only screen and (min-width : 376px) and (max-width : 767px) {
     /* navbar section */
     
     #universal-navbar-div {
@@ -1004,7 +1004,7 @@
       justify-content: space-between;
       min-height: 350px;
       background-repeat: no-repeat;
-      background-image: url('./assets/img/slider.jpg');
+      /* background-image: url('./assets/img/slider.jpg'); */
       background-position: center;
       background-size: cover;
     
@@ -1302,7 +1302,7 @@
     
     
 }
-@media only screen and (min-width : 426px) and (max-width : 768px) {
+@media only screen and (min-width : 768px) {
   /* navbar section */
   
   #universal-navbar-div {
@@ -1446,7 +1446,7 @@
     justify-content: space-around;
     min-height: 350px;
     background-repeat: no-repeat;
-    background-image: url('./assets/img/slider.jpg');
+    /* background-image: url('./assets/img/slider.jpg'); */
     background-position: center;
     background-size: cover;
   
@@ -1757,7 +1757,8 @@
   
 }
 
-@media only screen and (min-width : 769px) and (max-width : 1024px) {
+
+@media only screen and  (min-width : 1024px) {
   /* navbar section */
   
   #universal-navbar-div {
@@ -1901,7 +1902,7 @@
     justify-content: space-around;
     min-height: 350px;
     background-repeat: no-repeat;
-    background-image: url('./assets/img/slider.jpg');
+    /* background-image: url('./assets/img/slider.jpg'); */
     background-position: center;
     background-size: cover;
   
@@ -2213,7 +2214,7 @@
   
 }
 
-@media only screen and (min-width : 1025px) {
+@media only screen and (min-width : 1440px) {
   /* navbar section */
   
   #universal-navbar-div {
@@ -2359,7 +2360,7 @@
     justify-content: space-around;
     min-height: 350px;
     background-repeat: no-repeat;
-    background-image: url('./assets/img/slider.jpg');
+    /* background-image: url('./assets/img/slider.jpg'); */
     background-position: center;
     background-size: cover;
   
