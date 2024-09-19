@@ -168,8 +168,8 @@ const MoreInfoMapper = moreinfoDabatase.map((details) =>
       </blockquote>
   
   }     
- <button className='flex align-middle'><a className='flex focus:text-slate-800 flex-row gap-3 align-middle text-center' href={details.link}>
-        <span>LEARN MORE</span>
+ <button className='flex align-middle '><a className='flex focus:text-slate-800 flex-row gap-3 align-middle text-center' href={details.link}>
+        <span>LEARN MORE</span> 
         <FaArrowRightLong className=' my-auto' />
         </a></button>
     </div>)
@@ -297,7 +297,7 @@ const NewsDatabase = [
 ]
 
 const NewsDatabaseMapper = NewsDatabase.map((details) => 
-    <div className=' border-[1px] rounded-sm  border-blue-500 flex flex-col lg:max-w-[250px] md:max-w-[200px] xl:max-w-[450px] xl:min-w-[350px] max-w-[150px]'>
+    <div className=' border-[1px] rounded-sm  border-blue-500 flex flex-col lg:max-w-[250px] md:max-w-[200px]  xl:min-w-[350px] max-w-[150px]'>
       <div className='  w-full'>
         <img className='xl:max-h-[200px] w-full rounded-sm' src={details.img} alt="" />
       </div>
@@ -372,9 +372,9 @@ const ToTopStyler ={
 
     <section className=' overflow-hidden'>
       <div id='hosting-doctor-div'>
-        <FaCaretSquareLeft onClick={() => Scroll('left')} className=' hidden sm:ml-[4%] sm:flex sm:text-3xl sm:absolute text-lg min-w-5 text-sky-600' id='arrowDoc'/>
+        <FaCaretSquareLeft onClick={() => Scroll('left')} className=' cursor-pointer hover:text-slate-900 transition-all duration-300 hidden sm:ml-[4%] sm:flex sm:text-3xl sm:absolute text-lg min-w-5 text-sky-600' id='arrowDoc'/>
         <div style={{transform: `translateX(-${current * 100}%)`}} className=' transition ease-in-out duration-500' id='hosting-mapping-div'>{doctorDatabaseMaper}</div>
-        <FaCaretSquareRight onClick={() => Scroll('right')} className='  sm:flex sm:text-3xl sm:absolute sm:ml-[89%]  text-lg min-w-5 text-sky-600' id='arrowDoc' />
+        <FaCaretSquareRight onClick={() => Scroll('right')} className=' cursor-pointer hover:text-slate-900 transition-all duration-300  sm:flex sm:text-3xl sm:absolute sm:ml-[89%]  text-lg min-w-5 text-sky-600' id='arrowDoc' />
       </div>
     </section>     
 
@@ -611,8 +611,8 @@ I wear a stethoscope woven from empathy, a scalpel honed by precision, and a smi
           <Footer/>
         </div>
 
-        <div className=' ease-in-out transition-all duration-500' style={ToTopStyler}>
-        <button className=' bg-blue-600 text-slate-100 p-1 md:text-base text-sm'  id="myBtn" title="Go to top"><a href="#navSect"><FaArrowRightLong className=' p-1 text-xl md:text-2xl xl:text-4xl rotate-[270deg]' /></a></button>
+        <div className=' ease-in-out transition-all duration-500 ' style={ToTopStyler}>
+        <button className=' animate-bounce bg-blue-600 text-slate-100 p-1 md:text-base text-sm'  id="myBtn" title="Go to top"><a href="#navSect"><FaArrowRightLong className=' p-1 text-xl md:text-2xl xl:text-4xl rotate-[270deg]' /></a></button>
         </div>
 
     
