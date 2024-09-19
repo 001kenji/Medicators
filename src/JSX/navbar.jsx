@@ -4,7 +4,7 @@ import { MdLocalPhone } from "react-icons/md";
 import { MdEmail } from "react-icons/md"; 
 import medicatorsIcon from '../assets/img/favicon.png'
 import { GiHamburgerMenu } from "react-icons/gi"; 
-
+import { CiMenuFries } from "react-icons/ci";
 export default function Navbar() {
     const [current, setcurrent] = useState(1)
     const [showNav, setShowNav] = useState(false)
@@ -76,23 +76,23 @@ export default function Navbar() {
         <div id='universal-navbar-div'>
 
             <div id="top-nav-div">
-                <div className=" text-sm font-semibold" id="topLeft-detail-div">
+                <div className=" text-sm z-40 font-semibold" id="topLeft-detail-div">
                     
-                        <li>About</li>
-                        <li>Doctors</li>
-                        <li>Contact</li>
-                        <li>FAQ</li>
+                        <li className=" cursor-pointer hover:bg-blue-600 hover:text-slate-100 p-2 transition-all duration-300 " >About</li>
+                        <li className=" cursor-pointer hover:bg-blue-600 hover:text-slate-100 p-2 transition-all duration-300 " >Doctors</li>
+                        <li className=" cursor-pointer hover:bg-blue-600 hover:text-slate-100 p-2 transition-all duration-300 " >Contact</li>
+                        <li className=" cursor-pointer hover:bg-blue-600 hover:text-slate-100 p-2 transition-all duration-300 " >FAQ</li>
                     
                 </div>
-                <div className=" fixed z-50 float-left w-full">
-                    <span className="relative  float-right mr-4 bg-blue-600 p-2 rounded-sm text-slate-50 ">Get Pro</span>
+                <div className=" fixed z-30 float-left w-full translate-y-10">
+                    <span className="relative  float-right mr-4 z-50 bg-blue-600 p-2 cursor-pointer hover:bg-slate-900 hover:text-slate-50 transition-all duration-300 rounded-sm text-slate-50 ">Get Pro</span>
                 </div>
-                <div className=" font-semibold " id="top-right-detail-div">
-                    <span className=" text-sm">
-                        <MdLocalPhone className=" text-base text-sky-600" />
+                <div className=" font-semibold z-40  " id="top-right-detail-div">
+                    <span className="hover:text-amber-400 cursor-pointer text-sm">
+                        <MdLocalPhone className=" text-base  text-sky-600" />
                         +880123456789
                     </span>
-                    <span className=" text-sm">
+                    <span className="hover:text-amber-400 cursor-pointer text-sm">
                         <MdEmail className=" text-base text-sky-600" />
                         yahoo@medicators.com
                     </span>
@@ -107,22 +107,22 @@ export default function Navbar() {
                 
                 <div id="botton-nav-content-div" style={navStyler} className=' transition-all duration-500  '>
                     <ul id="nav-botton-list">
-                        <li>
-                            <a href="#universal-navbar-div">Home</a>
+                        <li className="hover:bg-blue-600 group  cursor-pointer p-2  px-2 py-1  transition-all duration-300" >
+                            <a className=" group-hover:text-slate-100" href="#universal-navbar-div">Home</a>
                         </li>
-                        <li> <a href="#doctor-carousels-div">Doctors</a></li>
-                        <li><a href="#major-services-div">Services</a></li>
-                        <li>
-                            <a href="#newsSect">News</a>
+                        <li className="hover:bg-blue-600 group cursor-pointer px-2 py-1 transition-all duration-300" > <a className=" group-hover:text-slate-100" href="#doctor-carousels-div">Doctors</a></li>
+                        <li className="hover:bg-blue-600 group cursor-pointer p-2  px-2 py-1  transition-all duration-300" ><a className=" group-hover:text-slate-100" href="#major-services-div">Services</a></li>
+                        <li className="hover:bg-blue-600 group cursor-pointer p-2  px-2 py-1  transition-all duration-300" >
+                            <a className=" group-hover:text-slate-100" href="#newsSect">News</a>
                         </li>
-                        <li><a href="#contact-container-div">Contact Us</a></li>
+                        <li className="hover:bg-blue-600 group cursor-pointer p-2  px-2 py-1  transition-all duration-300" ><a className=" group-hover:text-slate-100" href="#contact-container-div">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 </div>
                 
                 <div className=" mt-10 md:hidden">
-                    <GiHamburgerMenu onClick={() => Show('func')} className=" text-sky-600 font-semibold text-2xl" />
+                    <CiMenuFries  onClick={() => Show('func')} className=" cursor-pointer hover:text-slate-900 transition-all duration-300 text-sky-600 font-semibold text-3xl" />
                 </div>
             </div>
 
