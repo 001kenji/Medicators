@@ -22,7 +22,7 @@ Leveraging React's composability and Tailwind's rapid styling, I crafted a dynam
 ### Clone the repository
 
 ``` 
-git clone https://github.com/001kenji/Medicators.git ```<br>
+git clone https://github.com/001kenji/Medicators.git
 cd Frontend-Clone-Jumia-main
 ```
 
