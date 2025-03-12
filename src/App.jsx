@@ -389,7 +389,7 @@ const ToTopStyler ={
         <div className=' flex flex-col align-middle mx-auto'>
           <h1 className=' font-semibold px-4 text-black text-center xl:text-4xl text-2xl'>We Are Ready to Help You & Your Family</h1>
           <img className=' xl:w-20 w-16 mx-auto my-3' src={LifeTrackImg} alt="" />
-          <blockquote className=' text-slate-500 px-4 text-center'>I may not be able to cure all ills, but I can equip you with the tools to live your healthiest life.</blockquote>
+          <blockquote className=' text-slate-500 px-4 text-center'>I may not be able to cure all ills, but I can equip you with the tools to live healthiest life.</blockquote>
         </div>
         <div id='hosting-servicesMapper-div'>{servicesMapper}</div>
 
